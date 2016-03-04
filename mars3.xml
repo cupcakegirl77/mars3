@@ -1,1 +1,107 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="32" inline="false" x="48" y="14">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="73">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="82">
+        <next>
+          <block type="oled_setcursor" id="91" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="98">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="99">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawtext" id="108">
+                <field name="TEXT">red=</field>
+                <next>
+                  <block type="oled_drawnumber" id="143" inline="true">
+                    <value name="NUMBER">
+                      <block type="sensor_spectrometer" id="174">
+                        <field name="LIGHT">RED</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_setcursor" id="175" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="176">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="177">
+                            <field name="NUM">20</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_drawtext" id="178">
+                            <field name="TEXT">green=</field>
+                            <next>
+                              <block type="oled_drawnumber" id="179" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_spectrometer" id="180">
+                                    <field name="LIGHT">GREEN</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_setcursor" id="181" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="182">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="183">
+                                        <field name="NUM">30</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="oled_drawtext" id="184">
+                                        <field name="TEXT">blue=</field>
+                                        <next>
+                                          <block type="oled_drawnumber" id="185" inline="true">
+                                            <value name="NUMBER">
+                                              <block type="sensor_spectrometer" id="186">
+                                                <field name="LIGHT">BLUE</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="robot_delay" id="194" inline="true">
+                                                <value name="DELAY">
+                                                  <block type="math_number" id="195">
+                                                    <field name="NUM">100</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
